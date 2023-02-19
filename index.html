@@ -37,35 +37,42 @@
         <form action="" method="get" id="sign-up" autocomplete="off">
             <fieldset class="first_row">
                 <div class="wrapper">
-                    <label for="first_name"> First Name</label>
-                    <input type="text" name="first_name" id="first_name" required>
+                    <label for="first_name"> First Name *</label>
+                    <input type="text" name="first_name" id="first_name" required pattern="^[A-Z, a-z]{1,30}$">
+                    <!--could have used minlenght and maxlenght but i dont want numbers-->
+                    <div class="error first_name"> cant include numbers, can be 1 to 30 letters</div>
                 </div>
                 <div class="wrapper">
-                    <label for="last_name"> Last Name</label>
-                    <input type="text" name="first_name" id="last_name" required>
+                    <label for="last_name"> Last Name *</label>
+                    <input type="text" name="first_name" id="last_name" required pattern="^[A-Z, a-z]{1,30}$">
+                    <div class="error last_name">cant include numbers, can be 1 to 30 letters</div>
                 </div>
             </fieldset>
 
 
             <fieldset class="second_row">
                 <div class="wrapper">
-                    <label for="email"> Email</label>
+                    <label for="email"> Email *</label>
                     <input type="email" name="email" id="email" required placeholder="your@example.com">
+                    <div class="error email"> should include "@" and be in a right format</div>
                 </div>
                 <div class="wrapper">
                     <label for="phone_number"> Phone Number</label>
-                    <input type="tel" name="first_name" id="phone_number">
+                    <input type="tel" name="first_name" id="phone_number" pattern="^[1-9]{1,30}$">
+                    <div class="error tel"> only numbers, up to 30 characters</div>
                 </div>
             </fieldset>
 
             <fieldset class="third_row">
                 <div class="wrapper">
-                    <label for="password"> Password</label>
-                    <input type="password" name="password" id="password" required>
+                    <label for="password"> Password *</label>
+                    <input type="text" name="password" id="password" required pattern="^[A-Z, a-z, 1-9]{6,20}$">
+                    <div class="error password"> please enter password from 6 to 20 letters </div>
                 </div>
                 <div class="wrapper">
-                    <label for="confirm_password"> Confirm Password</label>
-                    <input type="password" name="confirm_password" id="confirm_password" required>
+                    <label for="confirm_password"> Confirm Password *</label>
+                    <input type="text" name="confirm_password" id="confirm_password" required>
+                    <div class="error repeat"></div>
                 </div>
             </fieldset>
 
@@ -74,6 +81,8 @@
     
     </div>
 </div>
-<button type="submit" form="sign-up" value="Submit"> Submit </button>
+<button type="submit" form="sign-up" value="Submit" id="btn"> Submit </button>
+<div class="notSubmitted"></div>
+<script src="script.js"></script>
 </body>
 </html>
