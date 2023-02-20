@@ -23,8 +23,9 @@ body{
     /* color: rgb(red, green, blue); */
 }
 .sign-up{
-    height: 70vh;
+    min-height: 450px;
     width: 100%;
+    min-width: 900px;
     display: flex;
     align-items: center;
     /* flex-grow: 2; */
@@ -96,14 +97,17 @@ form{
     flex-direction: column;
     justify-content:center;
     gap: 20px;
+    /* flex-wrap: wrap; */
 }
 fieldset{
+    display: flex;
     box-sizing: border-box;
-    width: 100%;
-    height: 22%;
+    /* width: 100%;
+    height: 22%; */
     display: flex;
     justify-content: space-around;
     border: 0;
+    flex-wrap: wrap;
     /* padding: 0; */
 }
 
@@ -112,8 +116,8 @@ button{
     margin-bottom: 10px;
     appearance: none;
     font-family: 'Comfortaa', cursive;
-    width: 10%;
-    height: 5%;
+    width: 120px;
+    min-height: 38px;
     border: 0;
     border-radius: 20px;
     background-color: var(--pink);
@@ -121,11 +125,13 @@ button{
     font-size: 1em;
     cursor: pointer;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 input{
     appearance: none;
     border: 0;
-    height: 70%;
+    min-height: 35px;
+    width: 250px;
     border-radius: 3px;
     background-color: var(--background);
     color: var(--orange1);
@@ -147,7 +153,8 @@ button:hover{
 .error{
     font-size: 0.8em;
     margin-top: 5px;
-    margin-bottom: 3px;
+    width: 250px;
+    /* margin-bottom: 70px; */
 }
 input:invalid:focus{
     border: 2px solid red;
